@@ -1,0 +1,186 @@
+@import 'primereact/resources/themes/lara-light-blue/theme.css' layer(primereact); /* This file is required for PrimeReact components styling */
+
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+
+@theme {
+    /* primary colors */
+    --color-primary-700: #023c62;
+    --color-primary-600: #015c92;
+    --color-primary: #0974d2;
+    --color-primary-400: #409bd2;
+    --color-primary-300: #a4d0e9;
+    --color-primary-200: #0974d21a;
+    
+    /* secondary colors */
+    --color-secondary-700: #e15e05;
+    --color-secondary-600: #fd6600;
+    --color-secondary: #fc7f00;
+    --color-secondary-400: #fd9933;
+    --color-secondary-300: #fecc99;
+    --color-secondary-200: #fff5eb;
+    
+    /* neutral colors */
+    --color-neutral-700: #191329;
+    --color-neutral-600: #474747;
+    --color-neutral: #939393;
+    --color-neutral-400: #dadada;
+    --color-neutral-300: #ededed;
+    --color-neutral-200: #f9fafb;
+    --color-neutral-100: #F6F6F7;
+    
+    --color-success-700: rgba(46, 125, 50, 1);
+    --color-success-600: rgba(46, 125, 50, 1);
+    --color-success: rgba(46, 125, 50, 1);
+    --color-success-400: rgba(46, 125, 50, 1);
+    --color-success-300: #dcfce7;
+    
+    --color-destructive: rgba(211, 47, 47, 1);
+    --color-warning: rgba(255, 180, 0, 1);
+    
+    --gradient-primary-vertical: linear-gradient(180deg, #6bace4 0%, #0974d2 100%);
+    --gradient-secondary-vertical: linear-gradient(
+    180deg,
+    rgba(106, 171, 228, 0.5) 0%,
+    rgba(12, 118, 210, 0.9) 100%
+    );
+    
+    /* app colors */
+    --color-label: #474747;
+    /* --color-lightGray:#C9C9C9; */
+    --color-lightGray: #c9c9c9;
+    --color-blue-highlighter: #0a68ba;
+    --color-teal-600: #7fcbcb;
+    --color-teal-400: #0d6464;
+    --color-teal-300: #f5fafa;
+    --color-tab-simple: #71717a;
+    --color-primary: #e00800;
+    --color-mauves: #631C46;
+    --color-green: #00C26E;
+    --color-default: #4a4d4e;
+    --color-warning: #f26600;
+    --color-error: #E00800;
+    --color-info: #006BFF;
+    
+    --font-suisse-intlregular: 'suisse_intlregular';
+    --font-suisse-intlblack: 'suisse_intlblack';
+    --font-suisse-intlbold: 'suisse_intlbold';
+    --font-suisse-intlbook: 'suisse_intlbook';
+    --font-suisse-intllight: 'suisse_intllight';
+    --font-suisse-intlmedium: 'suisse_intlmedium';
+    --font-suisse-intlitalic: 'suisse_intlitalic';
+    --font-suisse-intlsemi_bold: 'suisse_intlsemi_bold';
+    --font-suisse-intlthin: 'suisse_intlthin';
+    --font-suisse-intlultralight: 'suisse_intlultralight';
+}
+html,
+body {
+  @apply flex flex-col h-full bg-neutral-100 text-default text-base font-suisse-intlregular;
+}
+#root,
+.layout-wrapper {
+  @apply flex flex-col grow;
+}
+:root {
+  font-size: 16px !important;
+  font-family: var(--font-suisse-intlregular);
+    
+}
+.widgetWrapper { @apply p-2 rounded-xl border border-[#e9e9e9] }
+.footer { @apply w-full bg-[#f4f6fa] pt-5 pb-4.5 text-center }
+.copyrightYear { @apply font-bold}
+.verstionInfo { @apply text-xs! }
+.card { @apply px-2 dark:bg-gray-400 dark:text-gray-100 }
+
+
+.p-dropdown .p-inputtext {@apply p-2! text-sm}
+
+
+
+.p-checkbox.p-highlight .p-checkbox-box {
+    background: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+}
+
+.p-tag.p-tag-success { @apply text-green!; }
+
+.p-inputswitch.p-highlight .p-inputswitch-slider {
+  @apply bg-primary!;
+}
+
+.p-component, .p-inputtext { font-family: var(--font-suisse-intlregular); }
+.p-component {font-family: var(--font-suisse-intlregular);} 
+
+.p-paginator {  @apply border-0 p-0! }
+.p-datatable .p-paginator-bottom {  @apply border-b-0 border-t border-[#e9e9e9]! }
+.p-datatable .p-paginator-pages,
+.p-datatable .p-paginator-pages button,
+.p-datatable .p-paginator-bottom button { @apply m-0! p-0! pt-0.5!; }
+.p-paginator-current { @apply m-0! }
+.p-datatable .p-paginator-pages button.p-highlight:hover,
+.p-datatable .p-paginator-pages button.p-highlight {@apply bg-mauves! text-white!;}
+.p-paginator .p-dropdown { @apply h-auto }
+
+.tabs-btn-styling .p-button {
+  border-radius: 0px !important;
+}
+.p-dropdown .p-inputtext {@apply p-2! text-sm!}
+
+.complaint-info{
+  @apply flex gap-4 items-start mb-2!
+}
+
+.complaint-info-label{
+  @apply flex text-sm mt-2 min-w-45! mb-2!
+}
+.section-wrap-row { @apply mb-2 }
+
+.section-wrap-row label {
+   @apply flex text-sm min-w-fit mt-2 text-neutral-700
+}
+
+.p-component { @apply text-xs! }
+
+.p-accordion .p-accordion-header .p-accordion-header-link{
+  @apply p-2! bg-white
+}
+
+.p-accordion-tab-active {
+  gap: calc(var(--spacing)*0) !important;
+  flex-direction: column;
+  display: flex ;
+}
+
+.service-listing  li { 
+  @apply text-xs! p-1 border-b border-neutral-300 hover:bg-neutral-100 cursor-pointer
+}
+
+.ActiveClass {
+  @apply bg-mauves text-white hover:bg-mauves!
+}
+
+.p-accordion .p-accordion-header .p-accordion-header-link{
+  @apply  bg-white!
+}
+
+.p-accordion .p-accordion-header .p-accordion-header-link:hover{
+  @apply bg-white
+}
+
+.p-accordion-header.p-highlight{
+  @apply outline-none! border-0!
+}
+
+.p-dropdown.p-component.p-inputwrapper.p-dropdown-clearable{
+  @apply w-full!
+}
+
+.p-accordion .p-accordion-tab.p-accordion-tab-active {
+  @apply border border-neutral-400 rounded-md mb-4
+}
+.p-accordion .p-accordion-header .p-accordion-header-link {
+  @apply border-0! shadow-none!
+}
+.p-accordion .p-accordion-header { @apply border border-neutral-400 rounded-md  }
+.p-accordion .p-accordion-header.p-highlight { @apply border border-neutral-400  }
+.p-accordion .p-accordion-tab { @apply mb-2! }
